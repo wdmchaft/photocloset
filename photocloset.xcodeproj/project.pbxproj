@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42B1B55F1399B88600864ADD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1B55E1399B88600864ADD /* UIKit.framework */; };
+		42B1B5611399B88600864ADD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1B5601399B88600864ADD /* Foundation.framework */; };
+		42B1B5631399B88600864ADD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1B5621399B88600864ADD /* CoreGraphics.framework */; };
+		42B1B5651399B88600864ADD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1B5641399B88600864ADD /* CoreData.framework */; };
+		42B1B56B1399B88600864ADD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42B1B5691399B88600864ADD /* InfoPlist.strings */; };
+		42B1B56E1399B88600864ADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1B56D1399B88600864ADD /* main.m */; };
+		42B1B5711399B88600864ADD /* photoclosetAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1B5701399B88600864ADD /* photoclosetAppDelegate.m */; };
+		42B1B5741399B88600864ADD /* photocloset.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42B1B5721399B88600864ADD /* photocloset.xcdatamodeld */; };
+		42B1B5771399B88600864ADD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B1B5751399B88600864ADD /* MainWindow.xib */; };
+		42B1B57A1399B88600864ADD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1B5791399B88600864ADD /* RootViewController.m */; };
+		42B1B57D1399B88600864ADD /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B1B57B1399B88600864ADD /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42B1B55A1399B88600864ADD /* photocloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photocloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B1B55E1399B88600864ADD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		42B1B5601399B88600864ADD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42B1B5621399B88600864ADD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42B1B5641399B88600864ADD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		42B1B5681399B88600864ADD /* photocloset-Info.plist */ = {isa = PBXFileReference; path = "photocloset-Info.plist"; sourceTree = "<group>"; };
+		42B1B56A1399B88600864ADD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42B1B56C1399B88600864ADD /* photocloset-Prefix.pch */ = {isa = PBXFileReference; path = "photocloset-Prefix.pch"; sourceTree = "<group>"; };
+		42B1B56D1399B88600864ADD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42B1B56F1399B88600864ADD /* photoclosetAppDelegate.h */ = {isa = PBXFileReference; path = photoclosetAppDelegate.h; sourceTree = "<group>"; };
+		42B1B5701399B88600864ADD /* photoclosetAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photoclosetAppDelegate.m; sourceTree = "<group>"; };
+		42B1B5731399B88600864ADD /* photocloset.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = photocloset.xcdatamodel; sourceTree = "<group>"; };
+		42B1B5761399B88600864ADD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		42B1B5781399B88600864ADD /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		42B1B5791399B88600864ADD /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		42B1B57C1399B88600864ADD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42B1B5571399B88600864ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B1B55F1399B88600864ADD /* UIKit.framework in Frameworks */,
+				42B1B5611399B88600864ADD /* Foundation.framework in Frameworks */,
+				42B1B5631399B88600864ADD /* CoreGraphics.framework in Frameworks */,
+				42B1B5651399B88600864ADD /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42B1B54F1399B88600864ADD = {
+			isa = PBXGroup;
+			children = (
+				42B1B5661399B88600864ADD /* photocloset */,
+				42B1B55D1399B88600864ADD /* Frameworks */,
+				42B1B55B1399B88600864ADD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42B1B55B1399B88600864ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42B1B55A1399B88600864ADD /* photocloset.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42B1B55D1399B88600864ADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42B1B55E1399B88600864ADD /* UIKit.framework */,
+				42B1B5601399B88600864ADD /* Foundation.framework */,
+				42B1B5621399B88600864ADD /* CoreGraphics.framework */,
+				42B1B5641399B88600864ADD /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42B1B5661399B88600864ADD /* photocloset */ = {
+			isa = PBXGroup;
+			children = (
+				42B1B56F1399B88600864ADD /* photoclosetAppDelegate.h */,
+				42B1B5701399B88600864ADD /* photoclosetAppDelegate.m */,
+				42B1B5751399B88600864ADD /* MainWindow.xib */,
+				42B1B5781399B88600864ADD /* RootViewController.h */,
+				42B1B5791399B88600864ADD /* RootViewController.m */,
+				42B1B57B1399B88600864ADD /* RootViewController.xib */,
+				42B1B5721399B88600864ADD /* photocloset.xcdatamodeld */,
+				42B1B5671399B88600864ADD /* Supporting Files */,
+			);
+			path = photocloset;
+			sourceTree = "<group>";
+		};
+		42B1B5671399B88600864ADD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42B1B5681399B88600864ADD /* photocloset-Info.plist */,
+				42B1B5691399B88600864ADD /* InfoPlist.strings */,
+				42B1B56C1399B88600864ADD /* photocloset-Prefix.pch */,
+				42B1B56D1399B88600864ADD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42B1B5591399B88600864ADD /* photocloset */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42B1B5801399B88600864ADD /* Build configuration list for PBXNativeTarget "photocloset" */;
+			buildPhases = (
+				42B1B5561399B88600864ADD /* Sources */,
+				42B1B5571399B88600864ADD /* Frameworks */,
+				42B1B5581399B88600864ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = photocloset;
+			productName = photocloset;
+			productReference = 42B1B55A1399B88600864ADD /* photocloset.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42B1B5511399B88600864ADD /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 42B1B5541399B88600864ADD /* Build configuration list for PBXProject "photocloset" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42B1B54F1399B88600864ADD;
+			productRefGroup = 42B1B55B1399B88600864ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42B1B5591399B88600864ADD /* photocloset */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42B1B5581399B88600864ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B1B56B1399B88600864ADD /* InfoPlist.strings in Resources */,
+				42B1B5771399B88600864ADD /* MainWindow.xib in Resources */,
+				42B1B57D1399B88600864ADD /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42B1B5561399B88600864ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B1B56E1399B88600864ADD /* main.m in Sources */,
+				42B1B5711399B88600864ADD /* photoclosetAppDelegate.m in Sources */,
+				42B1B5741399B88600864ADD /* photocloset.xcdatamodeld in Sources */,
+				42B1B57A1399B88600864ADD /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42B1B5691399B88600864ADD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B1B56A1399B88600864ADD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42B1B5751399B88600864ADD /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B1B5761399B88600864ADD /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		42B1B57B1399B88600864ADD /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B1B57C1399B88600864ADD /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42B1B57E1399B88600864ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		42B1B57F1399B88600864ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		42B1B5811399B88600864ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "photocloset/photocloset-Prefix.pch";
+				INFOPLIST_FILE = "photocloset/photocloset-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42B1B5821399B88600864ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "photocloset/photocloset-Prefix.pch";
+				INFOPLIST_FILE = "photocloset/photocloset-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42B1B5541399B88600864ADD /* Build configuration list for PBXProject "photocloset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B1B57E1399B88600864ADD /* Debug */,
+				42B1B57F1399B88600864ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42B1B5801399B88600864ADD /* Build configuration list for PBXNativeTarget "photocloset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42B1B5811399B88600864ADD /* Debug */,
+				42B1B5821399B88600864ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		42B1B5721399B88600864ADD /* photocloset.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				42B1B5731399B88600864ADD /* photocloset.xcdatamodel */,
+			);
+			currentVersion = 42B1B5731399B88600864ADD /* photocloset.xcdatamodel */;
+			path = photocloset.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 42B1B5511399B88600864ADD /* Project object */;
+}
