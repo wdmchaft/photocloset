@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "GalleryViewController.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -21,12 +22,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Set up the edit and add buttons.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    [addButton release];
+    
+    self.title = @"Folders"; 
+    
+    // Add buttons to toolbar.
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                      target:self 
+                                      action:@selector(insertNewFolder)]; 
+    UIBarButtonItem *deleteButtonItem = [[UIBarButtonItem alloc]
+                                         initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                         target:self 
+                                         action:@selector(deleteAllTableObjects)]; 
+    self.toolbarItems = [NSArray arrayWithObjects:
+                         addButtonItem,
+                         deleteButtonItem,
+                         nil];
+    
+    [addButtonItem release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -100,6 +113,7 @@
         // Delete the managed object for the given index path
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        [context deletedObjects]; 
         
         // Save the context.
         NSError *error = nil;
@@ -124,13 +138,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
+    GalleryViewController *galleryViewController = [[GalleryViewController alloc] initWithNibName:@"GalleryViewController" bundle:nil];
+    [self.navigationController pushViewController:galleryViewController animated:YES];
+    [galleryViewController release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -162,7 +172,7 @@
     cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
 }
 
-- (void)insertNewObject
+- (void)insertNewFolder
 {
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
@@ -187,6 +197,34 @@
     }
 }
 
+- (void)deleteEntity:(NSString *)entity {
+    NSManagedObjectContext * context = [self managedObjectContext];
+    NSFetchRequest * fetch = [[[NSFetchRequest alloc] init] autorelease];
+    [fetch setEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:context]];
+    NSArray * result = [context executeFetchRequest:fetch error:nil];
+    for (id basket in result)
+        [context deleteObject:basket];    
+}
+
+- (void)deleteAllTableObjects {
+    [self deleteEntity:@"Event"];
+    
+    // Save the context.
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSError *error = nil;
+    if (![context save:&error])
+    {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    [self.tableView reloadData];
+}
 #pragma mark - Fetched results controller
 
 - (NSFetchedResultsController *)fetchedResultsController
