@@ -21,6 +21,4 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
-@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
-
 @end

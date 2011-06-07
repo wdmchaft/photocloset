@@ -9,6 +9,9 @@
 #import "photoclosetAppDelegate.h"
 
 #import "RootViewController.h"
+#import "GalleryViewController.h"
+#import <Three20/Three20.h>
+#import "FolderViewController.h"
 
 @implementation photoclosetAppDelegate
 
@@ -21,16 +24,27 @@
 
 @synthesize persistentStoreCoordinator=__persistentStoreCoordinator;
 
-@synthesize navigationController=_navigationController;
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    TTNavigator* navigator = [TTNavigator navigator];  
+    TTURLMap* map = navigator.URLMap;  
+    [map from:@"pc://gallery" toViewController:  [GalleryViewController class]];  
+    [map from:@"pc://folders" toViewController:  [FolderViewController class]];  
+    
+    [navigator openURLAction:[TTURLAction actionWithURLPath:@"pc://folders"]];  
+    return YES;  
+
     // Add the navigation controller's view to the window and display.
-    self.navigationController.toolbarHidden = NO; 
-    self.window.rootViewController = self.navigationController;
-    [self.window makeKeyAndVisible];
-    return YES;
+    // self.navigationController.toolbarHidden = NO; 
+    // self.window.rootViewController = self.navigationController;
+    // [self.window makeKeyAndVisible];
+    // return YES;
+}
+
+- (BOOL)application:(UIApplication*)application handleOpenURL:(NSURL*)URL {  
+    [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:URL.absoluteString]];  
+    return YES;  
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -75,14 +89,13 @@
     [__managedObjectContext release];
     [__managedObjectModel release];
     [__persistentStoreCoordinator release];
-    [_navigationController release];
     [super dealloc];
 }
 
 - (void)awakeFromNib
 {
-    RootViewController *rootViewController = (RootViewController *)[self.navigationController topViewController];
-    rootViewController.managedObjectContext = self.managedObjectContext;
+    // RootViewController *rootViewController = (RootViewController *)[self.navigationController topViewController];
+    // rootViewController.managedObjectContext = self.managedObjectContext;
 }
 
 - (void)saveContext
