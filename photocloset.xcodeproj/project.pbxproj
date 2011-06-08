@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		320B6C86F11D9990244A9731 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 320B6C86F11D9990244A9730 /* Three20.bundle */; };
+		42684944139F171D000C2D69 /* TableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42684943139F171D000C2D69 /* TableItem.m */; };
 		42B1B55F1399B88600864ADD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1B55E1399B88600864ADD /* UIKit.framework */; };
 		42B1B5611399B88600864ADD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1B5601399B88600864ADD /* Foundation.framework */; };
 		42B1B5631399B88600864ADD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1B5621399B88600864ADD /* CoreGraphics.framework */; };
@@ -123,6 +124,8 @@
 		320B6C86F11D9990244A9730 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
+		42684942139F171D000C2D69 /* TableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableItem.h; sourceTree = "<group>"; };
+		42684943139F171D000C2D69 /* TableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableItem.m; sourceTree = "<group>"; };
 		42B1B55A1399B88600864ADD /* photocloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photocloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B1B55E1399B88600864ADD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42B1B5601399B88600864ADD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -253,6 +256,8 @@
 		42B1B5661399B88600864ADD /* photocloset */ = {
 			isa = PBXGroup;
 			children = (
+				42684942139F171D000C2D69 /* TableItem.h */,
+				42684943139F171D000C2D69 /* TableItem.m */,
 				42C1AD26139DC96F007716CB /* FolderViewController.h */,
 				42C1AD27139DC96F007716CB /* FolderViewController.m */,
 				42C1AD28139DC970007716CB /* FolderViewController.xib */,
@@ -426,6 +431,7 @@
 				42B1B5741399B88600864ADD /* photocloset.xcdatamodeld in Sources */,
 				42B1B5951399D9EA00864ADD /* GalleryViewController.m in Sources */,
 				42C1AD29139DC970007716CB /* FolderViewController.m in Sources */,
+				42684944139F171D000C2D69 /* TableItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

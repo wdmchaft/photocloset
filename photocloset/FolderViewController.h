@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@interface FolderViewController : UIViewController
+    <UITableViewDelegate, UITableViewDataSource> 
+{
 
-@interface FolderViewController : UIViewController {
-    
 }
+
+@property (nonatomic, retain) NSMutableArray *listData; 
+@property (nonatomic, retain) IBOutlet UITableView *folderTableView; 
 
 - (IBAction)addFolder:(id)sender;
 
